@@ -1,4 +1,4 @@
-resource "aws_security_group" "ec2_sg" {
+resource "aws_security_group" "terraform" {
   name        = "allow_http/ssh"
   description = "Allow ssh from local IP and inbound/outbound traffic"
 
@@ -36,5 +36,5 @@ resource "aws_security_group" "ec2_sg" {
 }
 
 output "sg_id" {
-  value = aws_security_group.ec2_sg.id
+  value = aws_security_group.terraform.id
 }
