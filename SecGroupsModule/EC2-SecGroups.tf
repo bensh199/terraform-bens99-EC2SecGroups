@@ -44,3 +44,8 @@ resource "aws_instance" "web" {
     Name = "Terraform"
   }
 }
+
+output "sg_id" {
+  description = "ID of project sg"
+  value       = aws_security_group.ec2_sg.id
+}
